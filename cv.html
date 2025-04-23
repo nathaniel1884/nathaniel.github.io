@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel Adu-Boadu - ICT Educator</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+
+        .cv-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.2);
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        h1 {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+
+        .cv-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .main-content {
+            padding: 0 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+            position: relative;
+        }
+
+            h2::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 50px;
+                height: 2px;
+                background: var(--secondary);
+            }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+            .contact-list li {
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .skills-list {
+            margin: 1.5rem 0;
+        }
+
+        .skill-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 30px;
+        }
+
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 5px;
+                height: 100%;
+                width: 2px;
+                background: var(--secondary);
+            }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--secondary);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 0 5px;
+        }
+
+        .timeline-subtitle {
+            color: #6c757d;
+            margin: 0 0 10px;
+            font-style: italic;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+            .back-button:hover {
+                background: var(--dark);
+                transform: translateY(-2px);
+            }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="cv-header">
+        <img src="images/profile pic.jpg" alt="Nathaniel Adu-Boadu" class="profile-img">
+        <h1>Nathaniel Adu-Boadu</h1>
+    </header>
+
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <section>
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span>nathanielboadu1884@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                        <span>+233 542 514 403</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Winneba, Ghana</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fab fa-facebook"></i></span>
+                        <span>Nathaniel Ne-yo</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Filmora Video Editing</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe Photoshop</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe Lightroom</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML5 & CSS3</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Languages</h2>
+                <ul class="skills-list">
+                    <li>English (Fluent)</li>
+                    <li>Twi (Native)</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section>
+                <h2>Professional Profile</h2>
+                <p>I am a final-year ICT Education student passionate about transforming learning through technology integration. Combines technical expertise with innovative pedagogy to create dynamic, student-centered learning experiences that foster digital literacy and problem-solving skills.</p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2025</div>
+                    <h3 class="timeline-title">B.Sc. ICT Education</h3>
+                    <p class="timeline-subtitle">University of Education, Winneba</p>
+                    <ul>
+                        <li>Specializing in educational technology integration</li>
+                        
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2015 - 2017</div>
+                    <h3 class="timeline-title">WASSCE Certificate</h3>
+                    <p class="timeline-subtitle">KADE Senior High/Technical School</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Professional Experience</h2>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2024 - Apr 2025</div>
+                    <h3 class="timeline-title">ICT Teacher (Intern)</h3>
+                    <p class="timeline-subtitle">Uncle Rich Senior High School</p>
+                    <ul>
+                        <li>Developed and delivered ICT curriculum for SHS students</li>
+                        <li>Implemented project-based learning activities</li>
+                        <li>Maintained and troubleshooted computer lab equipment</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2022 - Present</div>
+                    <h3 class="timeline-title">Media Team Member</h3>
+                    <p class="timeline-subtitle">Greater Love Church, Winneba</p>
+                    <ul>
+                        <li>Manage sound engineering for church service and events</li>
+                        <li>Handle photography and visual projections</li>
+                        <li>Train volunteers on media equipment operation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Teaching Competencies</h2>
+                <ul>
+                    <li>Interactive lesson planning</li>
+                    <li>Classroom technology integration</li>
+                    <li>Student assessment and feedback</li>
+                </ul>
+            </section>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </main>
+    </div>
+</body>
+</html>

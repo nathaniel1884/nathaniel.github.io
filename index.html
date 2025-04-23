@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Portfolio - ICT Intern</title>
+    <style>
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+
+        body {
+            background-image: url('images/uncle rich school.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('images/uncle rich school.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-top: 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background-color: var(--dark-color);
+            padding: 1rem 0;
+        }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                flex-wrap: wrap;
+            }
+
+            nav li {
+                margin: 0 1rem;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+
+                nav a:hover {
+                    background-color: var(--primary-color);
+                }
+
+        .portfolio-section {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+            .gallery img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 5px;
+                transition: transform 0.3s;
+            }
+
+                .gallery img:hover {
+                    transform: scale(1.03);
+                }
+
+        .document-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .document-list li {
+                margin-bottom: 0.8rem;
+            }
+
+            .document-list a {
+                display: block;
+                padding: 0.8rem;
+                background-color: var(--light-color);
+                color: var(--dark-color);
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+
+                .document-list a:hover {
+                    background-color: var(--primary-color);
+                    color: white;
+                }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            width: fit-content;
+        }
+
+            .back-to-top:hover {
+                background-color: var(--secondary-color);
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/profile pic.jpg" alt="Intern Profile Photo" class="profile-img">
+            <h1>Nathaniel Adu-Boadu</h1>
+            <p> Teaching Portfolio</p>
+            <p> Index no:<strong>220022684</strong></p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#documents">Documents</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#resources">Teaching Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="portfolio-section">
+            <h2>About Me</h2>
+            <p>Welcome to my teaching portfolio! I am an ICT intern passionate about integrating technology into education to enhance learning experiences. This portfolio showcases my journey, achievements, and reflections during my teaching internship.</p>
+        </section>
+
+        <section id="documents" class="portfolio-section">
+            <h2>Professional Documents</h2>
+            <ul class="document-list">
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+                <li><a href="teaching-philosophy.html">Statement of Teaching Philosophy</a></li>
+                <li><a href="Documents/My Portfolio ict.pdf" target="_blank">Reflective Practice Journal</a></li>
+                <li><a href="Documents/MENTORS COMMENTS.pdf" target="_blank">Mentor's Assessment Comments</a></li>
+                <li><a href="Documents/Supervisors Comments.pdf" target="_blank">Supervisor's Assessment Comments</a></li>
+            </ul>
+            <a href="#top" class="back-to-top">↑ Top</a>
+        </section>
+
+        <section id="gallery" class="portfolio-section">
+            <h2>Teaching Gallery</h2>
+            <h3>
+                Report on field activities and pictures of intern  during the internship program
+                at Uncle Rich Senior High School,
+                Winneba. 4th  October, 2024 to 25th April 2025
+            </h3>
+            <div class="gallery">
+
+                <img src="images/Assembly.jpg" alt="At School Assembly" title="Intern at School Assembly">
+                <img src="images/teaching 2.jpg" alt="Intern Teaching" title="Intern teaching">
+                <img src="images/sports 2.jpg" alt="During Sports Activities" title="Intern engaged with Sports activities">
+                <img src="images/intern sports 1.jpg" alt="During Sports Activities" title="Intern engaged with Sports activities">
+                <img src="images/sports main.jpg" alt="During Sports Activities" title="Intern engaged with Sports activities">
+                <img src="images/Award.jpg" alt="During Sports Activities" title="Intern recieving an Award for best Football Coach">
+                <img src="images/on duty.jpg" alt="On Duty" title="Intern on duty">
+                <img src="images/marking scripts.jpg" alt="Marking Exam Scripts" title="Intern marking exam scripts">
+                <img src="images/invigi 1.jpg" alt="Invigilation" title="Intern invigilating exams">
+                <img src="images/setting exams ques.jpg" alt="Setting Exam Questions" title="Intern setting Exam questions">
+                <img src="images/intern with fellow interns.jpg" alt="With Fellow Interns" title="Intern with fellow interns">
+                <img src="images/with mentor.jpg" alt="With Mentor" title="Intern Mentor">
+                <img src="images/with supervisor.jpg" alt="With Supervisor" title="Intern with Supervisor">
+                <img src="images/interns with sup.jpg" alt="With fellow ict interns" title="Intern with fellow ICT interns and Supervisor">
+            </div>
+            <a href="#video-modal" class="video-thumbnail">
+                <img src="video-thumb.jpg" alt="Teaching video">
+            </a>
+
+            <div id="video-modal" class="modal">
+                <div class="modal-content">
+                    <video controls>
+                        <source src="videos/my portfolio teaching.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="portfolio-section">
+            <h2>Teaching Resources</h2>
+            <h3>Assessment Instruments</h3>
+            <ul class="document-list">
+                <li><a href="images/test items/exercise 1.jpeg" target="_blank">Class Exercises</a></li>
+                <li><a href="images/test items/class test main.jpg" target="_blank">Class Tests</a></li>
+                <li><a href="images/test items/homework main.jpg" target="_blank">Homework Assignments</a></li>
+                <li>
+                    <a href="Documents/shs exams term 2.pdf" target="_blank">Examination Questions</a>
+                </li>
+                <li><a href="images/test items/exam b.jpeg" target="_blank">Examination scripts 1</a></li>
+            </ul>
+
+            <h3>Marking Schemes</h3>
+            <ul class="document-list">
+                <li><a href="Documents/MARKING SCHEME FORM 1.pdf" target="_blank">Standard Marking Scheme</a></li>
+            </ul>
+
+            <h3>Lesson Plans</h3>
+            <ul class="document-list">
+                <li><a href="images/lesson plan/hardware.jpg" target="_blank">Components of Computer Hardware</a></li>
+                <li><a href="images/lesson plan/software.jpg" target="_blank">Categories of System Software</a></li>
+                <li><a href="images/lesson plan/word.jpg" target="_blank">Introduction to Word Processing</a></li>
+            </ul>
+
+            <h3>Teaching and Learning Materials (TLMs)</h3>
+            <ul class="document-list">
+                <li><a href="tlms.html">Teaching Materials</a></li>
+            </ul>
+        </section>
+    </div>
+    <a href="#top" class="back-to-top">↑ Top</a>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024-2025 ICT Teaching Intern Portfolio</p>
+            <p>Email: nathanielboadu1884@gmail.com | Phone: (0542514403)</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
